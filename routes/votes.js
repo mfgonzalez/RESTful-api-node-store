@@ -22,7 +22,19 @@ router.put('/', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
     let id = req.params['id'];
     let vote = store.get(id.toString());
-    console.log(vote);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200);
+    res.send(JSON.stringify(vote));
 });
+
+router.delete('/:id', function(req, res, next) {
+    let id = req.params['id'];
+    let vote = store.del(id.toString());
+    res.setHeader('Content-Type', 'application/json');
+    res.status(202);
+    res.send('');
+});
+
+
 
 module.exports = router;
