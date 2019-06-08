@@ -1,0 +1,8 @@
+{
+  "Marte": {
+    "nome": "Marte",
+    "largura": 6,
+    "altura": 6,
+    "href": "http://localhost:3000/territorio/Marte"
+  }
+}

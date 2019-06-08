@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var statusRouter = require('./routes/status');
 var votesRouter = require('./routes/votes');
+var territoriosRouter = require('./routes/territorio');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/status', statusRouter);
 app.use('/votes', votesRouter);
+app.use('/territorio', territoriosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
