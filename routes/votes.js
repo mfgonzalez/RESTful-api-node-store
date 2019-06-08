@@ -19,4 +19,10 @@ router.put('/', function(req, res, next) {
     res.send(JSON.stringify(vote));
 });
 
+router.get('/:id', function(req, res, next) {
+    let id = req.params['id'];
+    let vote = store.get(id.toString());
+    console.log(vote);
+});
+
 module.exports = router;
